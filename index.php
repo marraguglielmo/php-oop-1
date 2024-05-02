@@ -19,7 +19,9 @@ class Movie
 
     public function getFullInfo()
     {
-        echo "$this->name, $this->director, $this->genre, $this->year, $this->lang";
+        // converto gli elementi dell'array in una stringa
+        $genres = implode(' / ', $this->genre);
+        echo "$this->name, $this->director, $genres, $this->year, $this->lang";
     }
 }
 
