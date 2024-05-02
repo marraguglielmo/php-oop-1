@@ -8,7 +8,7 @@ class Movie
     public $year;
     public $lang;
 
-    public function __construct(string $_name, string $_genre, string $_director, int $_year, string $_lang)
+    public function __construct(string $_name, array $_genre, string $_director, int $_year, string $_lang)
     {
         $this->name = $_name;
         $this->genre = $_genre;
@@ -23,8 +23,8 @@ class Movie
     }
 }
 
-$film1 = new Movie('Interstellar', 'Fantascienza', 'Christopher Nolan', 2014, 'EN');
-$film2 = new Movie('Le Mans \'66', 'Sportivo - Azione', 'James Mangold', 2019, 'EN');
+$film1 = new Movie('Interstellar', ['Fantascienza'], 'Christopher Nolan', 2014, 'EN');
+$film2 = new Movie('Le Mans \'66', ['Sportivo', 'Azione'], 'James Mangold', 2019, 'EN');
 
 ?>
 
