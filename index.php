@@ -5,6 +5,7 @@ require_once __DIR__ . '/models/Movie.php';
 $film1 = new Movie('Interstellar', ['Fantascienza'], 'Christopher Nolan', 2014, 'EN');
 $film2 = new Movie('Le Mans \'66', ['Sportivo', 'Azione'], 'James Mangold', 2019, 'EN');
 
+// var_dump($film2)
 ?>
 
 <!DOCTYPE html>
@@ -24,11 +25,63 @@ $film2 = new Movie('Le Mans \'66', ['Sportivo', 'Azione'], 'James Mangold', 2019
         <h1 class="text-center">PHP OOP 1</h1>
         <div class="container">
             <h3>Film</h3>
-            <div>
-                <?php $film1->getFullInfo() ?>
-            </div>
-            <div>
-                <?php $film2->getFullInfo() ?>
+            <div class="row row-cols-4 ">
+                <!-- col 1 -->
+                <div class="col">
+                    <div class="gm_card text-center border border-2 rounded-2 py-3">
+                        <h4>
+                            <?php $film1->getName() ?>
+                        </h4>
+                        <div>
+                            <span class=" font-monospace">Regista:</span>
+                            <?php $film1->getDirector() ?>
+                        </div>
+                        <div>
+                            <span class=" font-monospace">Genere:</span>
+                            <?php foreach ($film1->genre as $genere) : ?>
+                                <span>
+                                    <?php echo $genere ?>
+                                </span>
+                            <?php endforeach ?>
+                        </div>
+                        <div>
+                            <span class=" font-monospace">Anno:</span>
+                            <?php $film1->getYear() ?>
+                        </div>
+                        <div>
+                            <span class=" font-monospace">Lingua:</span>
+                            <?php $film1->getLang() ?>
+                        </div>
+                    </div>
+                </div>
+                <!-- col 2 -->
+                <div class="col">
+                    <div class="gm_card text-center border border-2 rounded-2 py-3">
+                        <h4>
+                            <?php $film2->getName() ?>
+                        </h4>
+                        <div>
+                            <span class=" font-monospace">Regista:</span>
+                            <?php $film2->getDirector() ?>
+                        </div>
+                        <div>
+                            <span class=" font-monospace">Genere:</span>
+                            <?php foreach ($film2->genre as $genere) : ?>
+                                <span>
+                                    <?php echo $genere ?>
+                                </span>
+                            <?php endforeach ?>
+                        </div>
+                        <div>
+                            <span class=" font-monospace">Anno:</span>
+                            <?php $film2->getYear() ?>
+                        </div>
+                        <div>
+                            <span class=" font-monospace">Lingua:</span>
+                            <?php $film2->getLang() ?>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

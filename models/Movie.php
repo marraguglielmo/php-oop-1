@@ -17,10 +17,28 @@ class Movie
         $this->lang = $_lang;
     }
 
-    public function getFullInfo()
+    // public function getFullInfo()
+    // {
+    //     echo "$this->name, $this->director, $this->genre, $this->year, $this->lang";
+    // }
+
+    public function getName()
     {
-        // converto gli elementi dell'array in una stringa
-        $genres = implode(' / ', $this->genre);
-        echo "$this->name, $this->director, $genres, $this->year, $this->lang";
+        echo $this->name;
+    }
+
+    public function getDirector()
+    {
+        echo $this->director;
+    }
+
+    public function getYear()
+    {
+        echo $this->year;
+    }
+
+    public function getLang()
+    {
+        echo $this->lang;
     }
 }
