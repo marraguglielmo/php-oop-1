@@ -1,3 +1,22 @@
+<?php
+
+class Movie
+{
+    public $name;
+    public $director;
+    public $lang;
+    public $year;
+
+    public function __construct(string $_name, string $_director, int $_year)
+    {
+        $this->name = $_name;
+        $this->director = $_director;
+        $this->year = $_year;
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
